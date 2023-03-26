@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Generated Stories</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS styles */
+        body {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            background: #000000
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 50px;
+            font: bold 20px 'papyrus', fantasy;
+
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            font: bold 18px 'papyrus', fantasy;
+            color: #ffffffc8;
+        }
+
+        .glow {
+            font-size: 50px;
+            color: #fff;
+            text-align: center;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+
+        @-webkit-keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #000000, 0 0 60px #000000, 0 0 70px #000000;
+            }
+
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #404b50, 0 0 40px #404b50, 0 0 50px #404b50, 0 0 60px #404b50, 0 0 70px #404b50, 0 0 80px #404b50;
+            }
+        }
+
+        .back-btn {
+            padding: auto;
+            margin-left: 50%;
+            font: bold 20px 'papyrus', fantasy;
+            opacity: 0.6;
+            transition: 0.3s;
+            border: none;
+            background-color: rgba(255, 0, 0, 0.867);
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+        .back-btn:hover {
+        color: red;
+        background-color: black;
+    }
+    
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="glow">Generated Stories</h1>
+        {% for story in stories %}
+        <p>{{ story }}</p>
+        {% endfor %}
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <button onclick="history.back()" class="back-btn">Go Back</button>
+</body>
+
+</html>
