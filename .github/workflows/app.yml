@@ -1,0 +1,12 @@
+name: Flask App Workflow
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+  
+    - name: Run Flask app
+      run: |
+        . venv/bin/activate
+       python app.py
